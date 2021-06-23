@@ -1,7 +1,6 @@
 <template>
   <div>
-    dassdads
-    <!-- <PluginTest datas="Quentin"></PluginTest> -->
+    <PluginToast></PluginToast>
   </div>
 </template>
 

@@ -1,12 +1,16 @@
 {
-  "name": "webpack-w-plugin",
+  "name": "vue-w-toast",
   "version": "0.1.0",
+  "description": "vue-w-toast test",
+  "main": "lib/vue-w-toast.umd.min.js",
+  "keyword": "w vue toast test",
+  "author": "w",
   "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "lib": "vue-cli-service build --target lib --name plugintest --dest lib src/index.js"
+    "lib": "vue-cli-service build --target lib --dest dist src/index.js"
   },
   "dependencies": {
     "core-js": "^3.6.5",
@@ -19,7 +23,9 @@
     "@vue/compiler-sfc": "^3.0.0",
     "babel-eslint": "^10.1.0",
     "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^7.0.0"
+    "eslint-plugin-vue": "^7.0.0",
+    "node-sass": "^5.0.0",
+    "sass-loader": "^10.2.0"
   },
   "eslintConfig": {
     "root": true,
@@ -27,20 +33,13 @@
       "node": true
     },
     "extends": [
-      "plugin:vue/vue3-essential",
+      "plugin:vue/essential",
       "eslint:recommended"
     ],
     "parserOptions": {
       "parser": "babel-eslint"
     },
-    "rules": {
-      "generator-star-spacing": "off",
-      "no-tabs":"off",
-      "no-unused-vars":"off",
-      "no-console":"off",
-      "no-irregular-whitespace":"off",
-      "no-debugger": "off"
-    }
+    "rules": {}
   },
   "browserslist": [
     "> 1%",

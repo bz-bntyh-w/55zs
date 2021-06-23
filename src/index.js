@@ -1,28 +1,25 @@
-//导入组件
-import pluginTest from './plugins/PluginTest/index.js';
-//存在所有组件
-const components = [pluginTest]
-
 // 定义 install 方法，接收 Vue 作为参数。如果使用 use 注册插件，则所有的组件都将被注册
 const install = function (Vue) {
-  alert(111)
   // 判断是否安装
   if (install.installed) return
   
-  // 遍历注册全局组件
-  components.map((component) => {
-    Vue.component(component.name, component) //此处的使用的组件vue文件中的name属性
+  const files = require.context('./plugins/', true, /index\.(vue|js)$/)
+	files.keys().forEach(key => {
+    const arr = key.split('/')
+    const componentName = arr[arr.length-2]
+    // 获取组件配置
+    const componentConfig = files(key)
+    // 全局注册组件
+    Vue.component(
+      componentName,
+      // 如果这个组件选项是通过 `export default` 导出的，
+      // 那么就会优先使用 `.default`，
+      // 否则回退到使用模块的根。
+      componentConfig.default || componentConfig
+    )
   })
-
-// 判断是否是直接引入文件
-  if (typeof window != 'undefined' && window.Vue) {
-    install(window.Vue)
-  }
 }
 
 export default {
-  // 导出的对象必须具有 install，才能被 Vue.use() 方法安装
   install,
-  // 以下是具体的组件列表
-  pluginTest
 }
