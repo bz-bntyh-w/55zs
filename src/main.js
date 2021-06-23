@@ -1,4 +1,7 @@
 import { createApp } from 'vue'
 import App from './App.vue'
+import plugins from './index.js'
 
-createApp(App).mount('#app')
+var app = createApp(App)
+app.use(plugins)
+app.mount('#app')
