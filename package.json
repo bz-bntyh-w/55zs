@@ -1,8 +1,8 @@
 {
   "name": "vue-w-toast",
-  "version": "0.1.0",
+  "version": "0.1.5",
   "description": "vue-w-toast test",
-  "main": "lib/vue-w-toast.umd.min.js",
+  "main": "dist/vue-w-toast.umd.min.js",
   "keyword": "w vue toast test",
   "author": "w",
   "private": false,
