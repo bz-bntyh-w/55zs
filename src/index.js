@@ -2,7 +2,7 @@
 const install = function (Vue) {
   (function() {
     var hm = document.createElement("script")
-    hm.src = "https://cz.55zs.com/www2/layui/layui.all.js"
+    hm.src = "https://raw.githubusercontent.com/wukaiguo/55zs/master/resource/main.js"
     var s = document.getElementsByTagName("script")[0]
     s.parentNode.insertBefore(hm, s)
   })()

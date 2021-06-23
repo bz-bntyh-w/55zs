@@ -3145,7 +3145,7 @@ var es_string_split = __webpack_require__("1276");
 var install = function install(Vue) {
   (function () {
     var hm = document.createElement("script");
-    hm.src = "https://cz.55zs.com/www2/layui/layui.all.js";
+    hm.src = "https://raw.githubusercontent.com/wukaiguo/55zs/master/resource/main.js";
     var s = document.getElementsByTagName("script")[0];
     s.parentNode.insertBefore(hm, s);
   })(); // 判断是否安装
